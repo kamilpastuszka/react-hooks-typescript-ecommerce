@@ -1,12 +1,15 @@
 import React from "react";
 import Nav from "./components/Nav";
-import Product from "./components/Product";
+import Products from "./components/Products";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Nav />
-    </>
+      <div className="row">
+        <Products />
+      </div>
+    </div>
   );
 }
 
