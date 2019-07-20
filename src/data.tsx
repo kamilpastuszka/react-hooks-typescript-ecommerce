@@ -27,7 +27,7 @@ const data = [
   {
     id: 6,
     name: "Item 6",
-    price: 119.99
+    price: 600.99
   }
 ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { string, number } from "prop-types";
 
 export default function Product(props) {
   return (
