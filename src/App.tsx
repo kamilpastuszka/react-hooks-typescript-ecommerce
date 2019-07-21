@@ -1,16 +1,14 @@
 import React from "react";
 import Nav from "./components/Nav";
-import Products from "./components/Products";
+//import Products from "./components/Products";
 import { AppProvider } from "./context/context";
+import Container from "./containers/Container";
 
 function App() {
   return (
     <AppProvider>
       <div className="container">
-        <Nav />
-        <div className="row">
-          <Products />
-        </div>
+        <Container />
       </div>
     </AppProvider>
   );

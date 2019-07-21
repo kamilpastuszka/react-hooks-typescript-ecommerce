@@ -1,26 +1,21 @@
 interface IState {
-  total: number;
-  itemCount: number;
+  id: number;
+  name: string;
+  price: number;
 }
 
 type Action =
-  | { type: "addPrice"; amount: number }
-  | { type: "deductPrice"; amount: number };
+  | { type: "ADD_PRODUCT"; payload: IState[] }
+  | { type: "REMOVE_PRODUCT"; payload: any };
 
-const productReducer = (state: IState, action: Action) => {
+const productReducer = (state: IState[], action: Action) => {
   switch (action.type) {
-    case "addPrice":
-      return {
-        total: state.total + action.amount,
-        itemCount: state.itemCount++
-      };
-    case "deductPrice":
-      return {
-        total: state.total - action.amount,
-        itemCount: state.itemCount--
-      };
+    case "ADD_PRODUCT":
+      return state.concat({ ...action.payload });
+    case "REMOVE_PRODUCT":
+      return state.filter(product => product.id !== action.payload.id);
     default:
-      throw new Error();
+      return state;
   }
 };
 

@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import Product from "./Product";
-import data from "../data";
+import { Context } from "../context/context";
+import styled from "styled-components";
 
-export default function Products() {
+export default function Products(props) {
+  const { dispatch } = useContext(Context);
+
+  const addProduct = item => {
+    dispatch({ type: "ADD_PRODUCT", payload: item });
+  };
+
   return (
-    <>
-      {data.map(item => {
-        return <Product key={item.id} name={item.name} price={item.price} />;
+    <div className="row">
+      {props.data.map(item => {
+        return (
+          <Product
+            key={item.id}
+            name={item.name}
+            price={item.price}
+            addProduct={() => addProduct(item)}
+          />
+        );
       })}
-    </>
+    </div>
   );
 }
+
+const Wrapper = styled.div`
+  height: 100vh;
+`;
