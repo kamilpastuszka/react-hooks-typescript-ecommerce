@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaShoppingCart, FaStore } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Context } from "../context/context";
 
 export default function Nav(props) {
+  const { state } = useContext(Context);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light align-content-between">
@@ -20,7 +23,7 @@ export default function Nav(props) {
             <span>
               {" "}
               basket <FaShoppingCart />
-              <span className="itemCount">{0}</span>
+              <span className="itemCount">{state.length}</span>
             </span>
           </Link>
         </div>
