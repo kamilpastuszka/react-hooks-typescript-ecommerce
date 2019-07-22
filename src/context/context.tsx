@@ -1,13 +1,8 @@
 import React, { createContext, useReducer } from "react";
 import productReducer from "./productReducer";
 
-interface ctx {
-  state: {};
-  dispatch: void;
-}
-
-export const Context = React.createContext({
-  state: {},
+export const Context = createContext({
+  state: [{ id: 0, name: "", price: 0 }],
   dispatch: ({ type: string, payload: any }) => {}
 });
 

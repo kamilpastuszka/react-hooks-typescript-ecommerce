@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import Product from "./Product";
 import { Context } from "../context/context";
-import styled from "styled-components";
 
-export default function Products(props) {
+export default function Products({ data }) {
   const { dispatch } = useContext(Context);
 
   const addProduct = item => {
@@ -12,7 +11,7 @@ export default function Products(props) {
 
   return (
     <div className="row">
-      {props.data.map(item => {
+      {data.map(item => {
         return (
           <Product
             key={item.id}
@@ -25,7 +24,3 @@ export default function Products(props) {
     </div>
   );
 }
-
-const Wrapper = styled.div`
-  height: 100vh;
-`;

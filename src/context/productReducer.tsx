@@ -5,10 +5,10 @@ interface IState {
 }
 
 type Action =
-  | { type: "ADD_PRODUCT"; payload: IState[] }
+  | { type: "ADD_PRODUCT"; payload: IState }
   | { type: "REMOVE_PRODUCT"; payload: any };
 
-const productReducer = (state: IState[], action: Action) => {
+const productReducer = (state: Array<IState>, action: Action) => {
   switch (action.type) {
     case "ADD_PRODUCT":
       return state.concat({ ...action.payload });
