@@ -1,12 +1,4 @@
-interface IState {
-  id: number;
-  name: string;
-  price: number;
-}
-
-type Action =
-  | { type: "ADD_PRODUCT"; payload: IState }
-  | { type: "REMOVE_PRODUCT"; payload: any };
+import { IState, Action } from "../interfaces/interfaces";
 
 const productReducer = (state: Array<IState>, action: Action) => {
   switch (action.type) {
