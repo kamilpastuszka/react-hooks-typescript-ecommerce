@@ -5,9 +5,11 @@ export default function Product({ name, price, addProduct }) {
   return (
     <div className="col-sm-12 col-md-5 mt-5 justify-content-around">
       <div className="card">
-        <div className="card-body py-5">{name}</div>
+        <div className="card-body py-5">
+          <CardBodyConent>{name}</CardBodyConent>
+        </div>
         <div className="card-footer d-flex justify-content-around">
-          <div>{price} </div>
+          {price}
           <div>
             <button className="btn btn-primary" onClick={addProduct}>
               add
@@ -18,3 +20,9 @@ export default function Product({ name, price, addProduct }) {
     </div>
   );
 }
+
+const CardBodyConent = styled.div`
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: capitalize;
+`;
