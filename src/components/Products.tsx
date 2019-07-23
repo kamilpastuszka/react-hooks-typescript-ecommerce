@@ -10,7 +10,7 @@ export default function Products({ data }) {
   };
 
   return (
-    <div className="row">
+    <div className="row d-flex justify-content-around">
       {data.map(item => {
         return (
           <Product
