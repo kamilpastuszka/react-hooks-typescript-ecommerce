@@ -24,5 +24,4 @@ export default function Product({ name, price, addProduct }) {
 const CardBodyConent = styled.div`
   text-align: center;
   font-size: 1.5em;
-  text-transform: capitalize;
 `;
