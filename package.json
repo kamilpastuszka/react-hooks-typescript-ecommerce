@@ -1,7 +1,14 @@
 {
-  "name": "react-hooks-ecommerce-cards",
+  "name": "react-hooks-typescript-ecommerce",
   "version": "0.1.0",
-  "private": true,
+  "description": "React Hooks TypeScript Ecommerce project",
+  "keywords": [
+    "React",
+    "React Hooks",
+    "TypeScript",
+    "Bootstrap 4",
+    "Styled Components"
+  ],
   "dependencies": {
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.8",
@@ -17,6 +24,8 @@
     "styled-components": "^4.3.2",
     "typescript": "^3.5.3"
   },
+  "author": "Kamil Pastuszka",
+  "license": "MIT",
   "scripts": {
     "nodemon": "npm start",
     "start": "react-scripts start",
