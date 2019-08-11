@@ -4,7 +4,7 @@ import Products from "../../components/Products";
 import toJson from "enzyme-to-json";
 import productData from "../fixtures/data";
 
-test("should render Basket correctly", () => {
+test("It should render Product component correctly", () => {
   const wrapper = shallow(<Products data={productData} />);
   expect(toJson(wrapper)).toMatchSnapshot();
 });

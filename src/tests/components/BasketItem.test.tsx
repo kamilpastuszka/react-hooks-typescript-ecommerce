@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import BasketItem from "../../components/BasketItem";
 import toJson from "enzyme-to-json";
 
-test("should render Basket correctly", () => {
+test("It should render BasketItem component correctly", () => {
   const onRemoveProductSpy = jest.fn();
   const wrapper = shallow(
     <BasketItem

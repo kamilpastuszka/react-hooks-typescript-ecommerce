@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import Nav from "../../components/Nav";
 import toJson from "enzyme-to-json";
 
-test("should render Basket correctly", () => {
+test("It should render NAV component correctly", () => {
   const wrapper = shallow(<Nav />);
   expect(toJson(wrapper)).toMatchSnapshot();
 });
