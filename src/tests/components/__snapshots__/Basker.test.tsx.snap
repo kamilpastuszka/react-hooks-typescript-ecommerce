@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Basket correctly 1`] = `
+<table
+  className="table mt-5"
+>
+  <tbody>
+    <BasketItem
+      key="0"
+      name=""
+      price={0}
+      removeProduct={[Function]}
+    />
+  </tbody>
+</table>
+`;

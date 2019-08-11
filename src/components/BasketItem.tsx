@@ -1,13 +1,17 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-export default function BasketItem({ name, price, removeProduct }) {
+export default function BasketItem(item: {
+  name: string;
+  price: number;
+  removeProduct: any;
+}) {
   return (
     <tr>
-      <td>{name}</td>
-      <td>{price}</td>
+      <td>{item.name}</td>
+      <td>{item.price}</td>
       <td>
-        <span onClick={removeProduct}>
+        <span onClick={item.removeProduct}>
           <FaTrashAlt />
         </span>
       </td>

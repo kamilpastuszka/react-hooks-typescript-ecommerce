@@ -3,7 +3,7 @@ import { FaShoppingCart, FaStore } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Context } from "../context/context";
 
-export default function Nav(props) {
+export default function Nav(props: any) {
   const { state } = useContext(Context);
 
   return (

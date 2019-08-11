@@ -6,13 +6,13 @@ import styled from "styled-components";
 export default function Basket() {
   const { state, dispatch } = useContext(Context);
 
-  const removeProduct = item => {
+  const removeProduct = (item: { id: number; name: string; price: number }) => {
     dispatch({ type: "REMOVE_PRODUCT", payload: item });
   };
 
   const SelectedItems = state.map(item => (
     <BasketItem
-      key={item.name}
+      key={item.id}
       name={item.name}
       price={item.price}
       removeProduct={() => removeProduct(item)}

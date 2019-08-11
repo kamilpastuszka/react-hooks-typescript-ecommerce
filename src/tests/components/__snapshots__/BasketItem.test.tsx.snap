@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Basket correctly 1`] = `
+<tr>
+  <td>
+    Item 1
+  </td>
+  <td>
+    100
+  </td>
+  <td>
+    <span
+      onClick={[MockFunction]}
+    >
+      <FaTrashAlt />
+    </span>
+  </td>
+</tr>
+`;
